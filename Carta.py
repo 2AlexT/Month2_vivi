@@ -122,7 +122,7 @@ const nombre = "{nombre}";
 const aperturas = [
     `Muchas gracias por llegar a mi vida, {nombre}, por hacerme sentir bien y disfrutar cada momento contigo.`,
     `{nombre}, tu sabes que a mi me encantas, incluso cuando dices cosas raras jajaja.`,
-    `Cada instante contigo, {nombre}, se siente como un sueño del que no quiero despertar.`
+    `Cada instante contigo, {nombre}, se siente como un sueño, siempre lucido.`
 ];
 
 const cuerpo = [
