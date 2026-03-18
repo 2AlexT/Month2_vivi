@@ -3,40 +3,6 @@ from datetime import datetime
 
 nombre = "BUBUBUBUBU"
 
-aperturas = [
-    f"Muchas gracias por llegar a mi vida, {nombre}, por hacerme sentir bien, por poder reir tranquilamente, por disfrutar del tiempo juntos.",
-    f"{nombre}, tu sabes que a mi me encantas, incluso cuando dices cosas raras jajaja.",
-    f"Cada instante contigo, {nombre}, se siente como un sueño del que no quiero despertar."
-]
-
-cuerpo = [
-    "Tu sonrisa siempre me da ganas de reir, asuhaushuashu (Me HAPPY).",
-    "Jamas me faltaron momentos especiales. µ.o",
-    "Aprecio cada momento que puedo tengo contigo obviamente 7.7"
-]
-
-cierres = [
-    "Te quiero un montonoonononononono bibibi",
-    "💕💖💕💕💖💕💕💖💕💕💖💕",
-    "Quiero seguir construyendo momentos contigo o tambien tener momentos vergonzosos , no me quejo sjjsjsjs"
-]
-
-despedidas = [
-    "Con todo mi corazon 3.3",
-    "De parte de eu eu eu",
-    "Y bueno ya sabes quien hizo esto hsauhashuasuhsauhsuah"
-]
-
-texto = f"""
-{random.choice(aperturas)}
-
-{random.choice(cuerpo)} {random.choice(cuerpo)}
-
-{random.choice(cierres)}
-
-{random.choice(despedidas)}
-"""
-
 html = f"""
 <!DOCTYPE html>
 <html lang="es">
@@ -51,7 +17,7 @@ body {{
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
 }}
 
-/* 🔥 IMAGE ROW (no overlap) */
+/* 🔥 IMAGE ROW */
 .image-row {{
     position: fixed;
     top: 20px;
@@ -71,7 +37,7 @@ body {{
     transition: transform 0.3s ease;
 }}
 
-/* slight rotation per image */
+/* slight rotation */
 .image-row img:nth-child(1) {{ transform: rotate(-10deg); }}
 .image-row img:nth-child(2) {{ transform: rotate(8deg); }}
 .image-row img:nth-child(3) {{ transform: rotate(-6deg); }}
@@ -79,13 +45,13 @@ body {{
 .image-row img:nth-child(5) {{ transform: rotate(-8deg); }}
 .image-row img:nth-child(6) {{ transform: rotate(6deg); }}
 
-/* hover effect (optional but nice) */
+/* hover */
 .image-row img:hover {{
     transform: scale(1.1) rotate(0deg);
     opacity: 0.4;
 }}
 
-/* 💌 CARD CONTAINER */
+/* 💌 CARD */
 .container {{
     position: relative;
     z-index: 2;
@@ -95,7 +61,6 @@ body {{
     height: 100vh;
 }}
 
-/* 🧩 COMIC STYLE CARD */
 .card {{
     background: white;
     padding: 40px;
@@ -104,7 +69,7 @@ body {{
     border: 4px solid black;
     border-radius: 25px;
     
-    box-shadow: 8px 8px 0px black; /* comic effect */
+    box-shadow: 8px 8px 0px black;
     
     animation: fadeIn 1.5s ease-in-out;
 }}
@@ -145,16 +110,61 @@ p {{
 <div class="container">
     <div class="card">
         <h1>Para {nombre} ❤️</h1>
-        <p>{texto}</p>
+        <p id="carta"></p>
         <p style="text-align:right;">{datetime.now().strftime('%d/%m/%Y')}</p>
     </div>
 </div>
+
+<!-- ✨ RANDOM TEXT SCRIPT -->
+<script>
+const nombre = "{nombre}";
+
+const aperturas = [
+    `Muchas gracias por llegar a mi vida, ${nombre}, por hacerme sentir bien y disfrutar cada momento contigo.`,
+    `${nombre}, tu sabes que a mi me encantas, incluso cuando dices cosas raras jajaja.`,
+    `Cada instante contigo, ${nombre}, se siente como un sueño del que no quiero despertar.`
+];
+
+const cuerpo = [
+    "Tu sonrisa siempre me da ganas de reir, asuhaushuashu (Me HAPPY).",
+    "Jamas me faltaron momentos especiales. µ.o",
+    "Aprecio cada momento que tengo contigo obviamente 7.7"
+];
+
+const cierres = [
+    "Te quiero un montonoonononononono bibibi",
+    "💕💖💕💕💖💕💕💖💕💕💖💕",
+    "Quiero seguir construyendo momentos contigo o tambien tener momentos vergonzosos, no me quejo sjjsjsjs"
+];
+
+const despedidas = [
+    "Con todo mi corazon 3.3",
+    "De parte de eu eu eu",
+    "Y bueno ya sabes quien hizo esto 😏"
+];
+
+function random(arr) {{
+    return arr[Math.floor(Math.random() * arr.length)];
+}}
+
+const texto = `
+${{random(aperturas)}}
+
+${{random(cuerpo)}} ${{random(cuerpo)}}
+
+${{random(cierres)}}
+
+${{random(despedidas)}}
+`;
+
+document.getElementById("carta").innerText = texto;
+</script>
 
 </body>
 </html>
 """
 
-with open("carta.html", "w", encoding="utf-8") as f:
+with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
 
-print("❤️ Carta generada: abre 'carta.html'")
+print("❤️ Carta generada: abre 'index.html'")
