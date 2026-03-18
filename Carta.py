@@ -120,9 +120,9 @@ p {{
 const nombre = "{nombre}";
 
 const aperturas = [
-    `Muchas gracias por llegar a mi vida, ${nombre}, por hacerme sentir bien y disfrutar cada momento contigo.`,
-    `${nombre}, tu sabes que a mi me encantas, incluso cuando dices cosas raras jajaja.`,
-    `Cada instante contigo, ${nombre}, se siente como un sueño del que no quiero despertar.`
+    `Muchas gracias por llegar a mi vida, {nombre}, por hacerme sentir bien y disfrutar cada momento contigo.`,
+    `{nombre}, tu sabes que a mi me encantas, incluso cuando dices cosas raras jajaja.`,
+    `Cada instante contigo, {nombre}, se siente como un sueño del que no quiero despertar.`
 ];
 
 const cuerpo = [
@@ -140,7 +140,7 @@ const cierres = [
 const despedidas = [
     "Con todo mi corazon 3.3",
     "De parte de eu eu eu",
-    "Y bueno ya sabes quien hizo esto 😏"
+    "Y bueno ya sabes quien hizo esto auhsuhsahuasuhuhashu"
 ];
 
 function random(arr) {{
