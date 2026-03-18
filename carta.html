@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para BUBUBUBUBU ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+/* 🔥 IMAGE ROW (no overlap) */
+.image-row {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 0;
+}
+
+.image-row img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    opacity: 0.25;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* slight rotation per image */
+.image-row img:nth-child(1) { transform: rotate(-10deg); }
+.image-row img:nth-child(2) { transform: rotate(8deg); }
+.image-row img:nth-child(3) { transform: rotate(-6deg); }
+.image-row img:nth-child(4) { transform: rotate(10deg); }
+.image-row img:nth-child(5) { transform: rotate(-8deg); }
+.image-row img:nth-child(6) { transform: rotate(6deg); }
+
+/* hover effect (optional but nice) */
+.image-row img:hover {
+    transform: scale(1.1) rotate(0deg);
+    opacity: 0.4;
+}
+
+/* 💌 CARD CONTAINER */
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 🧩 COMIC STYLE CARD */
+.card {
+    background: white;
+    padding: 40px;
+    max-width: 600px;
+    
+    border: 4px solid black;
+    border-radius: 25px;
+    
+    box-shadow: 8px 8px 0px black; /* comic effect */
+    
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: #ff4d6d;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    white-space: pre-line;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- 🔥 IMAGE LINE -->
+<div class="image-row">
+    <img src="src1.jpeg">
+    <img src="src2.jpeg">
+    <img src="src3.jpeg">
+    <img src="src4.jpeg">
+    <img src="src5.jpeg">
+    <img src="src6.jpeg">
+</div>
+
+<!-- 💌 CARD -->
+<div class="container">
+    <div class="card">
+        <h1>Para BUBUBUBUBU ❤️</h1>
+        <p>
+BUBUBUBUBU, tu sabes que a mi me encantas, incluso cuando dices cosas raras jajaja.
+
+Jamas me faltaron momentos especiales. µ.o Aprecio cada momento que puedo tengo contigo obviamente 7.7
+
+Quiero seguir construyendo momentos contigo o tambien tener momentos vergonzosos , no me quejo sjjsjsjs
+
+Con todo mi corazon 3.3
+</p>
+        <p style="text-align:right;">17/03/2026</p>
+    </div>
+</div>
+
+</body>
+</html>
